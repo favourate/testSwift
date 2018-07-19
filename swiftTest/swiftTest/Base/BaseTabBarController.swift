@@ -29,7 +29,7 @@ class BaseTabBarController: UITabBarController {
         
         self.viewControllers = [comicNav,mainNav,mineNav]
         
-        self.tabBar.tintColor = UIColor.yellow
+        self.tabBar.tintColor = UIColor.blue
         self.tabBar.isTranslucent  = true
         
         

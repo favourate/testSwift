@@ -33,6 +33,13 @@
 		F9AB5CA920FF16E5001E4E33 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9AB5CA820FF16E5001E4E33 /* SDWebImage.framework */; };
 		F9AB5CAC20FF2698001E4E33 /* ComicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB5CAA20FF2698001E4E33 /* ComicDetailViewController.swift */; };
 		F9AB5CAD20FF2698001E4E33 /* ComicDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9AB5CAB20FF2698001E4E33 /* ComicDetailViewController.xib */; };
+		F9E867D62100315A00D389D3 /* CaculateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E867D52100315A00D389D3 /* CaculateTool.swift */; };
+		F9E867D92100625600D389D3 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E867D72100625600D389D3 /* MainTableViewCell.swift */; };
+		F9E867DA2100625600D389D3 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E867D82100625600D389D3 /* MainTableViewCell.xib */; };
+		F9E867DD21006BD700D389D3 /* MineHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E867DB21006BD700D389D3 /* MineHeaderTableViewCell.swift */; };
+		F9E867DE21006BD700D389D3 /* MineHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E867DC21006BD700D389D3 /* MineHeaderTableViewCell.xib */; };
+		F9E867E121006C2200D389D3 /* MineSecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E867DF21006C2200D389D3 /* MineSecondTableViewCell.swift */; };
+		F9E867E221006C2200D389D3 /* MineSecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E867E021006C2200D389D3 /* MineSecondTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +95,13 @@
 		F9AB5CA820FF16E5001E4E33 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9AB5CAA20FF2698001E4E33 /* ComicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailViewController.swift; sourceTree = "<group>"; };
 		F9AB5CAB20FF2698001E4E33 /* ComicDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComicDetailViewController.xib; sourceTree = "<group>"; };
+		F9E867D52100315A00D389D3 /* CaculateTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaculateTool.swift; sourceTree = "<group>"; };
+		F9E867D72100625600D389D3 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		F9E867D82100625600D389D3 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		F9E867DB21006BD700D389D3 /* MineHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		F9E867DC21006BD700D389D3 /* MineHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		F9E867DF21006C2200D389D3 /* MineSecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineSecondTableViewCell.swift; sourceTree = "<group>"; };
+		F9E867E021006C2200D389D3 /* MineSecondTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MineSecondTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +233,12 @@
 			children = (
 				F9AB5CA120FEE66E001E4E33 /* ComicListTableViewCell.swift */,
 				F9AB5CA220FEE66E001E4E33 /* ComicListTableViewCell.xib */,
+				F9E867D72100625600D389D3 /* MainTableViewCell.swift */,
+				F9E867D82100625600D389D3 /* MainTableViewCell.xib */,
+				F9E867DB21006BD700D389D3 /* MineHeaderTableViewCell.swift */,
+				F9E867DC21006BD700D389D3 /* MineHeaderTableViewCell.xib */,
+				F9E867DF21006C2200D389D3 /* MineSecondTableViewCell.swift */,
+				F9E867E021006C2200D389D3 /* MineSecondTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -234,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				F9AB5C8920FED162001E4E33 /* Marco.swift */,
+				F9E867D52100315A00D389D3 /* CaculateTool.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -366,10 +387,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E867DA2100625600D389D3 /* MainTableViewCell.xib in Resources */,
 				F9AB5C9820FED716001E4E33 /* MineViewController.xib in Resources */,
 				F9AB5C9C20FED72B001E4E33 /* MainViewController.xib in Resources */,
+				F9E867E221006C2200D389D3 /* MineSecondTableViewCell.xib in Resources */,
 				F953EC5D1FE75E55005A45E3 /* LaunchScreen.storyboard in Resources */,
 				F9AB5CAD20FF2698001E4E33 /* ComicDetailViewController.xib in Resources */,
+				F9E867DE21006BD700D389D3 /* MineHeaderTableViewCell.xib in Resources */,
 				F953EC5A1FE75E55005A45E3 /* Assets.xcassets in Resources */,
 				F953EC581FE75E55005A45E3 /* Main.storyboard in Resources */,
 				F9AB5CA420FEE66E001E4E33 /* ComicListTableViewCell.xib in Resources */,
@@ -446,16 +470,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9E867E121006C2200D389D3 /* MineSecondTableViewCell.swift in Sources */,
 				F9AB5C9420FED66E001E4E33 /* BaseTabBarController.swift in Sources */,
 				F9AB5C8D20FED23B001E4E33 /* NetWorkManager.swift in Sources */,
 				F9AB5C9720FED716001E4E33 /* MineViewController.swift in Sources */,
 				F9AB5C9F20FED74F001E4E33 /* ComicListViewController.swift in Sources */,
 				F9AB5C8A20FED162001E4E33 /* Marco.swift in Sources */,
 				F9AB5CA320FEE66E001E4E33 /* ComicListTableViewCell.swift in Sources */,
+				F9E867D62100315A00D389D3 /* CaculateTool.swift in Sources */,
 				F953EC551FE75E55005A45E3 /* ViewController.swift in Sources */,
 				F9AB5CAC20FF2698001E4E33 /* ComicDetailViewController.swift in Sources */,
 				F9AB5C9220FED649001E4E33 /* BaseNavController.swift in Sources */,
+				F9E867D92100625600D389D3 /* MainTableViewCell.swift in Sources */,
 				F953EC531FE75E54005A45E3 /* AppDelegate.swift in Sources */,
+				F9E867DD21006BD700D389D3 /* MineHeaderTableViewCell.swift in Sources */,
 				F9AB5C9020FED621001E4E33 /* BaseViewController.swift in Sources */,
 				F9AB5C9B20FED72B001E4E33 /* MainViewController.swift in Sources */,
 			);

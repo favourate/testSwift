@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="swiftTest" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="QwM-SA-u5Z" id="8FF-sH-oZn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,15 +25,25 @@
                     <rect key="frame" x="0.0" y="220" width="375" height="447"/>
                     <color key="backgroundColor" red="0.25882352939999997" green="0.61960784310000006" blue="0.90980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qian" translatesAutoresizingMaskIntoConstraints="NO" id="JGt-uy-Hz6">
+                    <rect key="frame" x="0.0" y="20" width="375" height="200"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="JGt-uy-Hz6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="K5E-Ta-jAj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="JGt-uy-Hz6" secondAttribute="trailing" id="KQ2-kV-oSc"/>
+                <constraint firstItem="JGt-uy-Hz6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="MJf-LQ-wbS"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QwM-SA-u5Z" secondAttribute="trailing" id="Q3g-cO-kGH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="QwM-SA-u5Z" secondAttribute="bottom" id="QUe-wm-6Tw"/>
+                <constraint firstItem="QwM-SA-u5Z" firstAttribute="top" secondItem="JGt-uy-Hz6" secondAttribute="bottom" id="XeU-uz-bov"/>
                 <constraint firstItem="QwM-SA-u5Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oeg-NL-Jyc"/>
                 <constraint firstItem="QwM-SA-u5Z" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="200" id="zKA-lL-dB1"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
+    <resources>
+        <image name="qian" width="100" height="100"/>
+    </resources>
 </document>

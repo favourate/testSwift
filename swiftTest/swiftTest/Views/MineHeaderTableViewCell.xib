@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="120" id="KGk-i7-Jjw" customClass="MineHeaderTableViewCell" customModule="swiftTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayc-U8-cFh">
+                        <rect key="frame" x="120" y="19" width="80" height="80"/>
+                        <color key="backgroundColor" red="0.86666666670000003" green="0.89019607840000003" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="bQC-eh-ksN"/>
+                            <constraint firstAttribute="height" constant="80" id="cVG-ar-Wqp"/>
+                        </constraints>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iGj-1E-rf0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="iGj-1E-rf0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="6FU-rJ-Gwk"/>
+                    <constraint firstAttribute="trailing" secondItem="iGj-1E-rf0" secondAttribute="trailing" id="KYo-aT-IyS"/>
+                    <constraint firstItem="ayc-U8-cFh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Npb-dh-sfC"/>
+                    <constraint firstItem="iGj-1E-rf0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="WzD-Wu-meG"/>
+                    <constraint firstAttribute="bottom" secondItem="iGj-1E-rf0" secondAttribute="bottom" id="Zbl-YM-tlo"/>
+                    <constraint firstItem="ayc-U8-cFh" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="p55-y9-aL7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bgImgView" destination="iGj-1E-rf0" id="o3L-4O-Ahk"/>
+                <outlet property="clickIconBtn" destination="ayc-U8-cFh" id="eYc-D1-Rsj"/>
+                <outlet property="iconBtn" destination="ayc-U8-cFh" id="Wey-Wo-RdL"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="14"/>
+        </tableViewCell>
+    </objects>
+</document>

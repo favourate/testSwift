@@ -10,16 +10,24 @@ import UIKit
 
 class BaseNavController: UINavigationController {
 
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        self.navigationBar.tintColor = UIColor.red
-        
-        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.backgroundColor:UIColor.white,
+        self.navigationBar.isTranslucent = true
+        self.navigationBar.titleTextAttributes = [
                                                   NSAttributedStringKey.font:UIFont.systemFont(ofSize: 16),
-                                                  NSAttributedStringKey.foregroundColor:UIColor.blue]
+                                                  NSAttributedStringKey.foregroundColor:UIColor.red]
+        let transparentView:UIImageView = UIImageView.init(image: UIImage.init(named: "nav_bar"))
+        transparentView.frame = CGRect.init(x: 0, y: -UIApplication.shared.statusBarFrame.height, width: KScreenW, height: self.navigationBar.frame.height + UIApplication.shared.statusBarFrame.height)
+        self.navigationController?.transparentView = transparentView
+        self.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationBar.shadowImage = UIImage()
+        self.navigationBar.insertSubview(transparentView, at: 0);
         
-        
+       print(UIApplication.shared.isStatusBarHidden)
         
     }
 
@@ -36,14 +44,30 @@ class BaseNavController: UINavigationController {
         super.pushViewController(viewController, animated: true)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
+    
 
 }
+
+
+
+extension UINavigationController {
+    
+    private struct AssociatedKeys{
+        static var imgV:UIImageView?
+    }
+    
+    var  transparentView : UIImageView? {
+        
+        get{
+            return objc_getAssociatedObject(self, &AssociatedKeys.imgV) as? UIImageView
+        }
+        set{
+            return objc_setAssociatedObject(self, &AssociatedKeys.imgV, 0, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN)
+        }
+        
+    }
+    
+    
+}
+

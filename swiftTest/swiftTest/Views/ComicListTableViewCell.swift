@@ -16,9 +16,15 @@ class ComicListTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLab: UILabel!
     @IBOutlet weak var userNameLab: UILabel!
     
+    @IBOutlet weak var titleLabWidthConstant: NSLayoutConstraint!
+    @IBOutlet weak var userNameWidthConstant: NSLayoutConstraint!
     override func awakeFromNib() {
         super.awakeFromNib()
        
+        self.userNameLab.layer.cornerRadius = self.userNameLab.frame.size.height/2
+        self.userNameLab.layer.masksToBounds = true
+        self.titleLab.layer.cornerRadius = self.titleLab.frame.size.height/2
+        self.titleLab.layer.masksToBounds = true
     }
     
     
@@ -30,6 +36,12 @@ class ComicListTableViewCell: UITableViewCell {
 //        self.verticalImg.sd_setImage(with: URL.init(string: imgUrl))
         self.userNameLab.text = param["user","nickname"].stringValue
         self.titleLab.text = param["title"].stringValue
+        
+        let titleWidth:CGFloat = CaculateTool.caculateTextWidth(caculateStr: param["title"].stringValue, fontSize: 14.0) + 5.0
+        let userLabWidth:CGFloat = CaculateTool.caculateTextWidth(caculateStr: param["user","nickname"].stringValue, fontSize: 14.0) + 5.0
+        
+        self.titleLabWidthConstant.constant = titleWidth
+        self.userNameWidthConstant.constant = userLabWidth
         
         
     }

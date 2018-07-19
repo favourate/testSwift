@@ -21,17 +21,21 @@ class ComicDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.addSubview(tableView)
-        
+        self.view.backgroundColor = UIColor.white
+        self.automaticallyAdjustsScrollViewInsets = false
         self.dataFromSever()
+        
+        if NSFoundationVersionNumber >= NSFoundationVersionNumber_iOS_9_0 {
+            
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationController?.navigationBar.alpha = 0
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-//        self.navigationController?.setNavigationBarHidden(false, animated: false)
         self.navigationController?.navigationBar.alpha = 1
     }
    
@@ -54,14 +58,17 @@ class ComicDetailViewController: BaseViewController {
     @objc  func clickBtn(btn : UIButton){
     }
 
+    
     lazy var tableView:UITableView = {
         var table = UITableView.init(frame:CGRect.init(x: 0, y: 0, width: KScreenW, height: KScreenH))
         table.estimatedRowHeight = 0;
-        table.separatorStyle = UITableViewCellSeparatorStyle.none
+        table.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0)
         table.delegate = self
         table.backgroundColor = UIColor.clear
         table.dataSource = self
         table.contentInset = UIEdgeInsetsMake(200, 0, 0, 0)
+//        table.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentBehavior.never
+        
         table.register(UINib.init(nibName: "ComicListTableViewCell", bundle: nil), forCellReuseIdentifier: "ComicListTableViewCellID")
         let headerView : UIView = UIView.init(frame: CGRect.init(x: 0, y: 0, width: KScreenW, height: 40))
         headerView.backgroundColor = UIColor.clear
@@ -70,7 +77,7 @@ class ComicDetailViewController: BaseViewController {
         btn.setTitle("点我转换顺序", for: UIControlState.normal)
         btn.setTitleColor(UIColor.blue, for: UIControlState.normal)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 15)
-        headerView.addSubview(btn)
+//        headerView.addSubview(btn)
         table.tableHeaderView = headerView
         return table
     }()
@@ -110,8 +117,18 @@ extension ComicDetailViewController : UITableViewDelegate,UITableViewDataSource,
         let contentY : CGFloat = scrollView.contentOffset.y
         
         if contentY < -200 {
-            let scale = (-contentY - 200) * 0.01 + 1;
+            let scale = (-contentY - 288) * 0.01 + 1;
             self.imgView.transform = CGAffineTransform.init(scaleX: scale, y: scale)
+            self.navigationController?.navigationBar.alpha = 0
+        }else
+        {
+            if contentY >= -200 && contentY < -160{
+                self.navigationController?.navigationBar.alpha = (contentY - 220)/40
+            }else
+            {
+                self.navigationController?.navigationBar.alpha = 1
+            }
+            
         }
         
         
