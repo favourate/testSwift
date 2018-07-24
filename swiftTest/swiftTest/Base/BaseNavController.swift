@@ -10,32 +10,28 @@ import UIKit
 
 class BaseNavController: UINavigationController {
 
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //设置导航栏为半透明
         self.navigationBar.isTranslucent = true
-        self.navigationBar.titleTextAttributes = [
-                                                  NSAttributedStringKey.font:UIFont.systemFont(ofSize: 16),
+        //设置导航栏字体属性
+        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.font:UIFont.systemFont(ofSize: 16),
                                                   NSAttributedStringKey.foregroundColor:UIColor.red]
+
+        //设置导航栏背景为空
+        self.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationBar.shadowImage = UIImage()
+        
+        //设置导航栏背景图
         let transparentView:UIImageView = UIImageView.init(image: UIImage.init(named: "nav_bar"))
         transparentView.frame = CGRect.init(x: 0, y: -UIApplication.shared.statusBarFrame.height, width: KScreenW, height: self.navigationBar.frame.height + UIApplication.shared.statusBarFrame.height)
         self.navigationController?.transparentView = transparentView
-        self.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationBar.shadowImage = UIImage()
         self.navigationBar.insertSubview(transparentView, at: 0);
-        
-       print(UIApplication.shared.isStatusBarHidden)
-        
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    //重写push方法 隐藏底部栏
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if self.viewControllers.count > 0 {
              viewController.hidesBottomBarWhenPushed = true
@@ -44,13 +40,9 @@ class BaseNavController: UINavigationController {
         super.pushViewController(viewController, animated: true)
     }
 
-   
-    
-
 }
 
-
-
+//运行时添加图片
 extension UINavigationController {
     
     private struct AssociatedKeys{

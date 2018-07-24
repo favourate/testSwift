@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		52608A6C4E6B59E1C71735EB /* Pods_swiftTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1374762D6AE043353FBFF72B /* Pods_swiftTest.framework */; };
+		F93099402101DC0A0041183B /* ViewCoordinateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F930993F2101DC0A0041183B /* ViewCoordinateExt.swift */; };
 		F93B8BA220FA02CE00DC8880 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F93B8BA120FA02CE00DC8880 /* Alamofire.framework */; };
 		F953EC531FE75E54005A45E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953EC521FE75E54005A45E3 /* AppDelegate.swift */; };
 		F953EC551FE75E55005A45E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F953EC541FE75E55005A45E3 /* ViewController.swift */; };
@@ -63,6 +64,7 @@
 		1374762D6AE043353FBFF72B /* Pods_swiftTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		78BCE5B21565DE14031249D7 /* Pods-swiftTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-swiftTest/Pods-swiftTest.debug.xcconfig"; sourceTree = "<group>"; };
 		DFAF2DA700F8BCC8EFF6FB15 /* Pods-swiftTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-swiftTest/Pods-swiftTest.release.xcconfig"; sourceTree = "<group>"; };
+		F930993F2101DC0A0041183B /* ViewCoordinateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCoordinateExt.swift; sourceTree = "<group>"; };
 		F93B8BA120FA02CE00DC8880 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F953EC4F1FE75E54005A45E3 /* swiftTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = swiftTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F953EC521FE75E54005A45E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F930993D21017F0F0041183B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				F930993E2101DBA00041183B /* Extension */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		F930993E2101DBA00041183B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F930993F2101DC0A0041183B /* ViewCoordinateExt.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		F953EC461FE75E54005A45E3 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +196,7 @@
 		F953EC511FE75E54005A45E3 /* swiftTest */ = {
 			isa = PBXGroup;
 			children = (
+				F930993D21017F0F0041183B /* Library */,
 				F9AB5C8E20FED5BE001E4E33 /* Base */,
 				F9AB5C8B20FED204001E4E33 /* NetWorkManager */,
 				F9AB5C8720FED075001E4E33 /* Utility */,
@@ -478,6 +497,7 @@
 				F9AB5C8A20FED162001E4E33 /* Marco.swift in Sources */,
 				F9AB5CA320FEE66E001E4E33 /* ComicListTableViewCell.swift in Sources */,
 				F9E867D62100315A00D389D3 /* CaculateTool.swift in Sources */,
+				F93099402101DC0A0041183B /* ViewCoordinateExt.swift in Sources */,
 				F953EC551FE75E55005A45E3 /* ViewController.swift in Sources */,
 				F9AB5CAC20FF2698001E4E33 /* ComicDetailViewController.swift in Sources */,
 				F9AB5C9220FED649001E4E33 /* BaseNavController.swift in Sources */,
